@@ -1,0 +1,59 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<CodeSnippets xmlns="http://schemas.microsoft.com/VisualStudio/2005/CodeSnippet">
+  <CodeSnippet Format="1.0.0">
+    <Header>
+      <SnippetTypes>
+        <SnippetType>Expansion</SnippetType>
+      </SnippetTypes>
+      <Title>Item Event Args</Title>
+      <Author>Jared Bienz</Author>
+      <Description>Typed event args for a specified item type</Description>
+      <HelpUrl>
+      </HelpUrl>
+      <Shortcut>
+      </Shortcut>
+    </Header>
+    <Snippet>
+      <Declarations>
+        <Literal Editable="true">
+          <ID>CustomItem</ID>
+          <ToolTip>
+          </ToolTip>
+          <Default>CustomItem</Default>
+          <Function>
+          </Function>
+        </Literal>
+      </Declarations>
+      <Code Language="csharp" Delimiter="$"><![CDATA[/// <summary>
+    /// Provides data for events related to <see cref="$CustomItem$"/> objects.
+    /// </summary>
+    public class $CustomItem$EventArgs : EventArgs
+    {
+        #region Constructors
+        /// <summary>
+        /// Initializes a new <see cref="$CustomItem$EventArgs"/> instance.
+        /// </summary>
+        /// <param name="item">
+        /// The item for the event.
+        /// </param>
+        public CustomItemEventArgs($CustomItem$ item)
+        {
+            // Validate
+            if (item == null) throw new ArgumentNullException("item");
+
+            // Store
+            Item = item;
+        }
+        #endregion // Constructors
+
+
+        #region Public Properties
+        /// <summary>
+        /// Gets the item for the event.
+        /// </summary>
+        public $CustomItem$ Item { get; private set; }
+        #endregion // Public Properties
+    }]]></Code>
+    </Snippet>
+  </CodeSnippet>
+</CodeSnippets>

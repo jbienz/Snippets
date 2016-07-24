@@ -1,0 +1,34 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<CodeSnippets xmlns="http://schemas.microsoft.com/VisualStudio/2005/CodeSnippet">
+  <CodeSnippet Format="1.0.0">
+    <Header>
+      <SnippetTypes>
+        <SnippetType>Expansion</SnippetType>
+      </SnippetTypes>
+      <Title>Validate Range</Title>
+      <Shortcut>valrange</Shortcut>
+      <Description>Throws an ArgumentOutOfRangeException if a variable is not within a specified range.</Description>
+      <Author>Jared Bienz</Author>
+    </Header>
+    <Snippet>
+      <Declarations>
+        <Object Editable="true">
+          <ID>var</ID>
+          <ToolTip>The variable to test.</ToolTip>
+          <Default>var</Default>
+        </Object>
+        <Literal>
+          <ID>min</ID>
+          <ToolTip>The minimum acceptable value.</ToolTip>
+          <Default>min</Default>
+        </Literal>
+        <Literal>
+          <ID>max</ID>
+          <ToolTip>The maximum acceptable value.</ToolTip>
+          <Default>max</Default>
+        </Literal>
+      </Declarations>
+      <Code Language="csharp"><![CDATA[if (($var$ < $min$) || ($var$ > $max$)) throw new ArgumentOutOfRangeException(nameof($var$));$end$]]></Code>
+    </Snippet>
+  </CodeSnippet>
+</CodeSnippets>

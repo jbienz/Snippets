@@ -1,0 +1,24 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<CodeSnippets xmlns="http://schemas.microsoft.com/VisualStudio/2005/CodeSnippet">
+  <CodeSnippet Format="1.0.0">
+    <Header>
+      <SnippetTypes>
+        <SnippetType>Expansion</SnippetType>
+      </SnippetTypes>
+      <Title>Validate Not Null</Title>
+      <Shortcut>valnull</Shortcut>
+      <Description>Throws an ArgumentNullException if a variable is null.</Description>
+      <Author>Jared Bienz</Author>
+    </Header>
+    <Snippet>
+      <Declarations>
+        <Object Editable="true">
+          <ID>var</ID>
+          <ToolTip>The variable to test for null.</ToolTip>
+          <Default>var</Default>
+        </Object>
+      </Declarations>
+      <Code Language="csharp"><![CDATA[if ($var$==null) throw new ArgumentNullException(nameof($var$));$end$]]></Code>
+    </Snippet>
+  </CodeSnippet>
+</CodeSnippets>

@@ -1,0 +1,92 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<CodeSnippets xmlns="http://schemas.microsoft.com/VisualStudio/2005/CodeSnippet">
+  <CodeSnippet Format="1.0.0">
+    <Header>
+      <Title>Dependency Property With Change Notification</Title>
+      <Shortcut>dpropn</Shortcut>
+      <Description>Expands to a complete dependency property with change notification.</Description>
+      <Author>Jared Bienz</Author>
+      <SnippetTypes>
+        <SnippetType>Expansion</SnippetType>
+      </SnippetTypes>
+    </Header>
+    <Snippet>
+      <Declarations>
+        <Literal Editable="false">
+          <ID>className</ID>
+          <ToolTip>Class name</ToolTip>
+          <Function>ClassName()</Function>
+          <Default>ClassNamePlaceholder</Default>
+        </Literal>
+        <Literal>
+          <ID>propType</ID>
+          <ToolTip>Property type</ToolTip>
+          <Default>object</Default>
+        </Literal>
+        <Literal>
+          <ID>propName</ID>
+          <ToolTip>Property name</ToolTip>
+          <Default>PropertyName</Default>
+        </Literal>
+        <Literal>
+          <ID>fieldName</ID>
+          <ToolTip>The variable backing this property</ToolTip>
+          <Default>fieldName</Default>
+        </Literal>
+        <Literal>
+          <ID>defaultValue</ID>
+          <ToolTip>The default value for this property</ToolTip>
+          <Default>defaultValue</Default>
+        </Literal>
+      </Declarations>
+      <Code Language="csharp">
+        <![CDATA[/// <summary>
+  /// Identifies the <see cref="$propName$"/> dependency property.
+  /// </summary>
+  static public readonly DependencyProperty $propName$Property = DependencyProperty.Register("$propName$", typeof($propType$), typeof($className$), new FrameworkPropertyMetadata($defaultValue$, On$propName$Changed));
+
+  private static void On$propName$Changed(DependencyObject d, DependencyPropertyChangedEventArgs e)
+  {
+    (($className$)d).Handle$propName$Changed(e);
+  }
+  
+  private void Handle$propName$Changed(DependencyPropertyChangedEventArgs e)
+  {
+  
+    // Notify
+    On$propName$Changed(e);
+  }
+
+  /// <summary>
+  /// Occurs when the value of the <see cref="$propName$"/> property has changed.
+  /// </summary>
+  /// <param name="e">
+  /// A <see cref="DependencyPropertyChangedEventArgs"/> containing event information.
+  /// </param>
+  protected virtual void On$propName$Changed(DependencyPropertyChangedEventArgs e)
+  {
+
+  }
+  
+  /// <summary>
+  /// Gets or sets the $propName$ of the <see cref="$className$"/>. This is a dependency property.
+  /// </summary>
+  /// <value>
+  /// The $propName$ of the <see cref="$className$"/>.
+  /// </value>
+  public $propType$ $propName$
+  {
+      get
+      {
+          return ($propType$)GetValue($propName$Property);
+      }
+      set
+      {
+          SetValue($propName$Property, value);
+      }
+  }
+  $end$]]>
+      </Code>
+    </Snippet>
+  </CodeSnippet>
+</CodeSnippets>

@@ -1,0 +1,50 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<CodeSnippets xmlns="http://schemas.microsoft.com/VisualStudio/2005/CodeSnippet">
+  <CodeSnippet Format="1.0.0">
+    <Header>
+      <Title>Property</Title>
+      <Shortcut>prop</Shortcut>
+      <Description>Expands to a property with code comments.</Description>
+      <Author>Jared Bienz</Author>
+      <SnippetTypes>
+        <SnippetType>Expansion</SnippetType>
+      </SnippetTypes>
+    </Header>
+    <Snippet>
+      <Declarations>
+        <Literal Editable="false">
+          <ID>className</ID>
+          <ToolTip>Class name</ToolTip>
+          <Function>ClassName()</Function>
+          <Default>ClassNamePlaceholder</Default>
+        </Literal>
+        <Literal>
+          <ID>propType</ID>
+          <ToolTip>Property type</ToolTip>
+          <Default>object</Default>
+        </Literal>
+        <Literal>
+          <ID>propTitle</ID>
+          <ToolTip>Property title</ToolTip>
+          <Default>Title</Default>
+        </Literal>
+        <Literal>
+          <ID>propName</ID>
+          <ToolTip>Property name</ToolTip>
+          <Default>PropertyName</Default>
+        </Literal>
+      </Declarations>
+      <Code Language="csharp">
+        <![CDATA[
+  /// <summary>
+  /// Gets or sets the $propTitle$ of the <see cref="$className$"/>.
+  /// </summary>
+  /// <value>
+  /// The $propTitle$ of the <c>$className$</c>.
+  /// </value>
+	public $propType$ $propName$ { get; set; }
+  $end$]]>
+      </Code>
+    </Snippet>
+  </CodeSnippet>
+</CodeSnippets>
