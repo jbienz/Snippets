@@ -1,0 +1,46 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<CodeSnippets xmlns="http://schemas.microsoft.com/VisualStudio/2005/CodeSnippet">
+  <CodeSnippet Format="1.0.0">
+    <Header>
+      <SnippetTypes>
+        <SnippetType>Expansion</SnippetType>
+      </SnippetTypes>
+      <Title>Validate Unity Component</Title>
+      <Author>Jared Bienz</Author>
+      <Description>Ensures that a required component is found or disables the behavior.</Description>
+      <Shortcut>valucmp</Shortcut>
+    </Header>
+    <Snippet>
+      <Declarations>
+        <Literal Editable="false">
+          <ID>classname</ID>
+          <ToolTip>classname</ToolTip>
+          <Default>classname</Default>
+          <Function>ClassName()</Function>
+        </Literal>
+        <Object Editable="true">
+          <ID>var</ID>
+          <ToolTip>The variable to test.</ToolTip>
+          <Default>var</Default>
+          <Function>
+          </Function>
+          <Type>
+          </Type>
+        </Object>
+        <Object Editable="true">
+          <ID>comp</ID>
+          <ToolTip>The component type.</ToolTip>
+          <Default>comp</Default>
+          <Function>
+          </Function>
+          <Type>
+          </Type>
+        </Object>      </Declarations>
+      <Code Language="csharp" Delimiter="$"><![CDATA[if ($var$ == null)
+{
+	Debug.LogError($$"A {nameof($comp$)} component is required but none was found. {nameof($classname$)} has been disabled.");
+	this.enabled = false;
+}$end$]]></Code>
+    </Snippet>
+  </CodeSnippet>
+</CodeSnippets>
