@@ -12,6 +12,12 @@
     </Header>
     <Snippet>
       <Declarations>
+        <Literal Editable="false">
+          <ID>classname</ID>
+          <ToolTip>classname</ToolTip>
+          <Default>classname</Default>
+          <Function>ClassName()</Function>
+        </Literal>	  
         <Object Editable="true">
           <ID>var</ID>
           <ToolTip>The variable to test.</ToolTip>
@@ -20,7 +26,7 @@
       </Declarations>
       <Code Language="csharp"><![CDATA[if ($var$ == null)
 		{
-			Debug.LogErrorFormat("'{0}' is required but is not set. {1} has been disabled.", "$var$", this.GetType().Name);
+			Debug.LogError($$"{nameof($var$)} is required but is not set. {nameof($classname$)} has been disabled.");
 			this.enabled = false;
 		}$end$]]></Code>
     </Snippet>

@@ -1,0 +1,45 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<CodeSnippets xmlns="http://schemas.microsoft.com/VisualStudio/2005/CodeSnippet">
+  <CodeSnippet Format="1.0.0">
+    <Header>
+      <SnippetTypes>
+        <SnippetType>Expansion</SnippetType>
+      </SnippetTypes>
+      <Title>Unity Property ReadOnly</Title>
+      <Author>Jared Bienz</Author>
+      <Description>Generates a Read-Only Unity property with inspector backed field.</Description>
+      <Shortcut>upropr</Shortcut>
+    </Header>
+    <Snippet>
+      <Declarations>
+        <Object Editable="true">
+          <ID>DataType</ID>
+          <ToolTip>DataType</ToolTip>
+          <Default>DataType</Default>
+        </Object>
+        <Literal Editable="true">
+          <ID>fieldName</ID>
+          <ToolTip>fieldName</ToolTip>
+          <Default>fieldName</Default>
+        </Literal>
+        <Literal Editable="true">
+          <ID>PropName</ID>
+          <ToolTip>propName</ToolTip>
+          <Default>propName</Default>
+        </Literal>
+        <Literal Editable="true">
+          <ID>Title</ID>
+          <ToolTip>Title</ToolTip>
+          <Default>Title</Default>
+        </Literal>
+      </Declarations>
+      <Code Language="csharp"><![CDATA[[SerializeField]
+[Tooltip("$Title$")]
+private $DataType$ $fieldName$;
+/// <summary>
+/// Gets $end$$Title$
+/// </summary>
+public $DataType$ $PropName$ { get => $fieldName$; }]]></Code>
+    </Snippet>
+  </CodeSnippet>
+</CodeSnippets>
