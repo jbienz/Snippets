@@ -18,7 +18,7 @@
           <Default>var</Default>
         </Object>
       </Declarations>
-      <Code Language="csharp"><![CDATA[if ($var$==null) throw new ArgumentNullException(nameof($var$));$end$]]></Code>
+      <Code Language="csharp"><![CDATA[if ($var$==null) { throw new ArgumentNullException(nameof($var$)); }$end$]]></Code>
     </Snippet>
   </CodeSnippet>
 </CodeSnippets>

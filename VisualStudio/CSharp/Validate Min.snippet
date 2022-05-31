@@ -23,7 +23,7 @@
           <Default>min</Default>
         </Literal>
       </Declarations>
-      <Code Language="csharp"><![CDATA[if ($var$ < $min$) throw new ArgumentOutOfRangeException(nameof($var$));$end$]]></Code>
+      <Code Language="csharp"><![CDATA[if ($var$ < $min$) { throw new ArgumentOutOfRangeException(nameof($var$)); }$end$]]></Code>
     </Snippet>
   </CodeSnippet>
 </CodeSnippets>
