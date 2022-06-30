@@ -5,16 +5,16 @@
       <SnippetTypes>
         <SnippetType>Expansion</SnippetType>
       </SnippetTypes>
-      <Title>Task Return Comment</Title>
-      <Shortcut>tcom</Shortcut>
-      <Description>Expands to the language-independant code comment for returning a task.</Description>
+      <Title>CancellationToken Comment</Title>
+      <Shortcut>comct</Shortcut>
+      <Description>Default comment for a CancellationToken.</Description>
       <Author>Jared Bienz</Author>
     </Header>
     <Snippet>
       <Code Language="csharp">
-        <![CDATA[/// <returns>
-        /// A <see cref="Task"/> that represents the operation.
-        /// </returns>]]></Code>
+        <![CDATA[/// <param name="ct">
+        /// A <see cref="CancellationToken"/> that can be used to cancel the operation.
+        /// </param>]]></Code>
     </Snippet>
   </CodeSnippet>
 </CodeSnippets>
