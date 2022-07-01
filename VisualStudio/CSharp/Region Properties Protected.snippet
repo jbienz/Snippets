@@ -6,16 +6,16 @@
         <SnippetType>Expansion</SnippetType>
         <SnippetType>SurroundsWith</SnippetType>
       </SnippetTypes>
-      <Title>Member Variables</Title>
-      <Shortcut>memvars</Shortcut>
-      <Description>Surrounds the selected code with a region indicating that the selection defines the member variables of the class.</Description>
+      <Title>Protected Properties</Title>
+      <Shortcut>rgnprop</Shortcut>
+      <Description>Creates a region denoting protected properties.</Description>
       <Author>Jared Bienz</Author>
     </Header>
     <Snippet>
       <Code Language="csharp">
-        <![CDATA[#region Member Variables
-$selected$$end$
-#endregion // Member Variables]]></Code>
+        <![CDATA[$end$#region Protected Properties
+$selected$
+#endregion // Protected Properties]]></Code>
     </Snippet>
   </CodeSnippet>
 </CodeSnippets>

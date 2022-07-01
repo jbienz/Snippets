@@ -6,16 +6,16 @@
         <SnippetType>Expansion</SnippetType>
         <SnippetType>SurroundsWith</SnippetType>
       </SnippetTypes>
-      <Title>Overridables / Event Triggers</Title>
-      <Shortcut>overtrig</Shortcut>
-      <Description>Surrounds the selected code with a region indicating that the selection defines overridable methods and event triggers within the class.</Description>
+      <Title>Public Methods</Title>
+      <Shortcut>regpubm</Shortcut>
+      <Description>Creates a region denoting public methods.</Description>
       <Author>Jared Bienz</Author>
     </Header>
     <Snippet>
       <Code Language="csharp">
-        <![CDATA[#region Overridables / Event Triggers
-$selected$$end$
-#endregion // Overridables / Event Triggers]]></Code>
+        <![CDATA[$end$#region Public Methods
+$selected$
+#endregion // Public Methods]]></Code>
     </Snippet>
   </CodeSnippet>
 </CodeSnippets>

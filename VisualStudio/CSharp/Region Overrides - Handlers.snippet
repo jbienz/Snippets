@@ -6,16 +6,16 @@
         <SnippetType>Expansion</SnippetType>
         <SnippetType>SurroundsWith</SnippetType>
       </SnippetTypes>
-      <Title>Public Properties</Title>
-      <Shortcut>pubprops</Shortcut>
-      <Description>Surrounds the selected code with a region indicating that the selection defines public properties of the class.</Description>
+      <Title>Overrides / Event Handlers</Title>
+      <Shortcut>rgnoverhand</Shortcut>
+      <Description>Creates a region denoting overridden methods and event handlers.</Description>
       <Author>Jared Bienz</Author>
     </Header>
     <Snippet>
       <Code Language="csharp">
-        <![CDATA[$end$#region Public Properties
-$selected$
-#endregion // Public Properties]]></Code>
+        <![CDATA[#region Overrides / Event Handlers
+$selected$$end$
+#endregion // Overrides / Event Handlers]]></Code>
     </Snippet>
   </CodeSnippet>
 </CodeSnippets>

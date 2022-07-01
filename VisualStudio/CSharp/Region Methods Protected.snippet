@@ -6,15 +6,16 @@
         <SnippetType>Expansion</SnippetType>
         <SnippetType>SurroundsWith</SnippetType>
       </SnippetTypes>
-      <Title>Static Version</Title>
-      <Shortcut>staticver</Shortcut>
-      <Description>Surrounds the selected code with a region indicating that the selection defines the static version of the class.</Description>
+      <Title>Protected Methods</Title>
+      <Shortcut>regprom</Shortcut>
+      <Description>Creates a region surrounding protected methods.</Description>
       <Author>Jared Bienz</Author>
     </Header>
     <Snippet>
-      <Code Language="csharp"><![CDATA[#region Static Version
-$selected$$end$
-#endregion // Static Version]]></Code>
+      <Code Language="csharp">
+        <![CDATA[$end$#region Protected Methods
+$selected$
+#endregion // Protected Methods]]></Code>
     </Snippet>
   </CodeSnippet>
 </CodeSnippets>
