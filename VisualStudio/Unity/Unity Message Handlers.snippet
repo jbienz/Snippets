@@ -6,16 +6,16 @@
         <SnippetType>Expansion</SnippetType>
         <SnippetType>SurroundsWith</SnippetType>
       </SnippetTypes>
-      <Title>Overrides / Event Handlers</Title>
-      <Shortcut>rgnoverhand</Shortcut>
-      <Description>Creates a region denoting overridden methods and event handlers.</Description>
+      <Title>Unity Overrides</Title>
+      <Shortcut>unitymsg</Shortcut>
+      <Description>Surrounds the selected code with a region indicating that the selection overrides unity specific behavior methods.</Description>
       <Author>Jared Bienz</Author>
     </Header>
     <Snippet>
       <Code Language="csharp">
-        <![CDATA[#region Overrides / Event Handlers
-$selected$$end$
-#endregion // Overrides / Event Handlers]]></Code>
+        <![CDATA[$end$#region Unity Message Handlers
+$selected$
+#endregion // Unity Message Handlers]]></Code>
     </Snippet>
   </CodeSnippet>
 </CodeSnippets>

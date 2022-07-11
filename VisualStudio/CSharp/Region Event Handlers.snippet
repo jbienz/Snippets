@@ -6,16 +6,16 @@
         <SnippetType>Expansion</SnippetType>
         <SnippetType>SurroundsWith</SnippetType>
       </SnippetTypes>
-      <Title>Unity Overrides</Title>
-      <Shortcut>unityover</Shortcut>
-      <Description>Surrounds the selected code with a region indicating that the selection overrides unity specific behavior methods.</Description>
+      <Title>Overrides / Event Handlers</Title>
+      <Shortcut>rgneventhand</Shortcut>
+      <Description>Creates a region denoting event handlers.</Description>
       <Author>Jared Bienz</Author>
     </Header>
     <Snippet>
       <Code Language="csharp">
-        <![CDATA[$end$#region Unity Overrides
-$selected$
-#endregion // Unity Overrides]]></Code>
+        <![CDATA[#region Event Handlers
+$selected$$end$
+#endregion // Event Handlers]]></Code>
     </Snippet>
   </CodeSnippet>
 </CodeSnippets>
