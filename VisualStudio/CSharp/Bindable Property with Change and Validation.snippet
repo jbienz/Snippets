@@ -1,0 +1,92 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<CodeSnippets xmlns="http://schemas.microsoft.com/VisualStudio/2005/CodeSnippet">
+  <CodeSnippet Format="1.0.0">
+    <Header>
+      <Title>Bindable Property with Change and Validation</Title>
+      <Shortcut>bpropcv</Shortcut>
+      <Description>Expands to a bindable property with change tracking and validation.</Description>
+      <Author>Jared Bienz</Author>
+      <SnippetTypes>
+        <SnippetType>Expansion</SnippetType>
+      </SnippetTypes>
+    </Header>
+    <Snippet>
+      <Declarations>
+        <Literal Editable="false">
+          <ID>className</ID>
+          <ToolTip>Class name</ToolTip>
+          <Function>ClassName()</Function>
+          <Default>ClassNamePlaceholder</Default>
+        </Literal>
+        <Literal>
+          <ID>propType</ID>
+          <ToolTip>Property type</ToolTip>
+          <Default>object</Default>
+        </Literal>
+        <Literal>
+          <ID>propName</ID>
+          <ToolTip>Property name</ToolTip>
+          <Default>PropertyName</Default>
+        </Literal>
+        <Literal>
+          <ID>defaultValue</ID>
+          <ToolTip>The default value for this property</ToolTip>
+          <Default>defaultValue</Default>
+        </Literal>
+      </Declarations>
+      <Code Language="csharp">
+        <![CDATA[/// <summary>
+  /// Identifies the <see cref="$propName$"/> bindable property.
+  /// </summary>
+  public static readonly BindableProperty $propName$Property = BindableProperty.Create("$propName$", typeof($propType$), typeof($className$), $defaultValue$, propertyChanged: On$propName$Changed, validateValue: IsValid$propName$);
+  
+  /// <summary>
+  /// Called when the $propName$ bindable property changes.
+  /// </summary>
+	/// <param name="bindable">
+	/// The object where the property has changed.
+	/// </param>
+	/// <param name="oldValue">
+	/// The old property value.
+	/// </param>
+	/// <param name="newValue">
+	/// The new property value.
+	/// </param>
+  static private void On$propName$Changed(BindableObject bindable, object oldValue, object newValue)
+  {
+    
+  }
+  
+	/// <summary>
+	/// Gets a value that indicates if the value is valid for the Name property.
+	/// </summary>
+	/// <param name="bindable">
+	/// The object where the property is changing.
+	/// </param>
+	/// <param name="value">
+	/// The value to validate.
+	/// </param>
+	/// <returns>
+	/// <c>true</c> if the value is valid; otherwise <c>false</c>.
+	/// </returns>
+  static private bool IsValid$propName$(BindableObject bindable, object value)
+  {
+  
+  }
+
+  /// <summary>
+  /// Gets or sets the $propName$ of the <see cref="$className$"/>. This is a bindable property.
+  /// </summary>
+  /// <value>
+  /// The $propName$ of the <see cref="$className$"/>.
+  /// </value>
+  public $propType$ $propName$
+  {
+      get => ($propType$)GetValue($propName$Property);
+      set => SetValue($propName$Property, value);
+  }
+  $end$]]>
+      </Code>
+    </Snippet>
+  </CodeSnippet>
+</CodeSnippets>
